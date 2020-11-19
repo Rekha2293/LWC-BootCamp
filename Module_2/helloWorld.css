@@ -1,0 +1,15 @@
+.redColor{
+    color : #FF0000;
+    font-size: 25px;
+}
+.greenColor{
+    color :green;
+    font-size: 25px;
+}
+.blueColor{
+    color :blue;
+    font-size: 25px;
+}
+ul:not(.browser-default) li {
+    list-style-type: disc;
+}
