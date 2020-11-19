@@ -1,0 +1,39 @@
+<template>
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+        <thead>
+            <tr class="slds-line-height_reset">
+              <th class="" scope="col">
+                <div class="slds-truncate">Index</div>
+              </th>
+              <th class="" scope="col">
+                <div class="slds-truncate">Id</div>
+              </th>
+              <th class="" scope="col">
+                <div class="slds-truncate">Name</div>
+              </th>
+              <th class="" scope="col">
+                <div class="slds-truncate">Email</div>
+              </th>
+              </tr>
+        </thead>
+            <template for:each={contacts} for:item="contact" for:index='ind'>
+                <tr class='slds-border_top' key={contact.Id}>
+                    <td>{ind}</td>
+                    <td>c{contact.Id}</td>
+                    <td>{contact.Name}</td>
+                    <td>{contact.Email}</td>
+                </tr>
+            </template>
+        </table>
+        <lightning-card title="Iterator: Demo" icon-name="custom:custom14">
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                <template iterator:it={contacts}>
+                    <tr key={it.value.Id}>
+                    <td>
+                        {it.value.Name}- {it.value.Email}
+                    </td>
+                    </tr>
+                </template>
+        </table>
+        </lightning-card>
+</template>
